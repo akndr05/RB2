@@ -232,3 +232,4 @@ GUEST_FUNCTION_STUB(__imp__IoRemoveShareAccess);
 GUEST_FUNCTION_STUB(__imp__ObReferenceObject);
 GUEST_FUNCTION_STUB(__imp__ObIsTitleObject);
 GUEST_FUNCTION_STUB(__imp__RtlUpcaseUnicodeChar);
+GUEST_FUNCTION_STUB(__imp__XamShowFriendsUI);

@@ -703,20 +703,20 @@ std::filesystem::path GetUserContentRoot() {
     if (SUCCEEDED(SHGetKnownFolderPath(FOLDERID_Documents, 0, nullptr, &path))) {
         std::filesystem::path result(path);
         CoTaskMemFree(path);
-        return result / "reblue";
+        return result / "rb2";
     }
     // Fallback: environment variable
     if (const char* profile = std::getenv("USERPROFILE")) {
-        return std::filesystem::path(profile) / "Documents" / "reblue";
+        return std::filesystem::path(profile) / "Documents" / "rb2";
     }
     return {};
 #else
     // Linux: XDG_DATA_HOME or ~/.local/share
     if (const char* xdg = std::getenv("XDG_DATA_HOME")) {
-        return std::filesystem::path(xdg) / "reblue";
+        return std::filesystem::path(xdg) / "rb2";
     }
     if (const char* home = std::getenv("HOME")) {
-        return std::filesystem::path(home) / ".local" / "share" / "reblue";
+        return std::filesystem::path(home) / ".local" / "share" / "rb2";
     }
     return {};
 #endif

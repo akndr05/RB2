@@ -2,8 +2,6 @@
 
 Recompiled using the [ReXGlue SDK](https://github.com/rexglue/rexglue-sdk)
 
-NOTE: Building requires using the July 20th, 2010 localization prototype at the current moment. A patcher will be available later.
-
 ## Setup
 
 1. Ensure REXSDK is set properly in your environment - see [ReXGlue SDK](https://github.com/rexglue/rexglue-sdk) for more info
