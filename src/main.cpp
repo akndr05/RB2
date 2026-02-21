@@ -38,7 +38,7 @@ protected:
         ImGui::SetNextWindowSize(ImVec2(220, 60), ImGuiCond_FirstUseEver);
         ImGui::SetNextWindowBgAlpha(0.5f);
         if (ImGui::Begin("Debug##overlay", nullptr, ImGuiWindowFlags_NoCollapse)) {
-            ImGui::Text("%.1f FPS (%.2f ms)", io.Framerate, 1000.0f / io.Framerate);
+            ImGui::Text("%.1f FPS (%.2f ms)", io.Framerate / 2, 2000.0f / io.Framerate);
         }
         ImGui::End();
     }
@@ -124,19 +124,6 @@ public:
         auto* graphics_system = runtime_->graphics_system();
         if (graphics_system && graphics_system->presenter()) {
             auto* presenter = graphics_system->presenter();
-            auto* provider = graphics_system->provider();
-            if (provider) {
-                immediate_drawer_ = provider->CreateImmediateDrawer();
-                if (immediate_drawer_) {
-                    immediate_drawer_->SetPresenter(presenter);
-                    imgui_drawer_ = std::make_unique<rex::ui::ImGuiDrawer>(window_.get(), 64);
-                    imgui_drawer_->SetPresenterAndImmediateDrawer(presenter, immediate_drawer_.get());
-                    debug_overlay_ = std::unique_ptr<DebugOverlayDialog>(
-                        new DebugOverlayDialog(imgui_drawer_.get()));
-                    runtime_->set_display_window(window_.get());
-                    runtime_->set_imgui_drawer(imgui_drawer_.get());
-                }
-            }
             window_->SetPresenter(presenter);
         }
 

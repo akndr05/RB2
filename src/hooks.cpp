@@ -1,5 +1,8 @@
 #include <rex/runtime/guest/function.h>
 #include "generated/rb2_init.h"
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 int vsprintf_s_entry(char* buffer, size_t size, const char* format, va_list args) {
     return vsprintf_s(buffer, size, format, args);
@@ -11,6 +14,17 @@ int sprintf_s_entry(char* buffer, size_t size, const char* format, va_list args)
 
 int printf_entry(const char* format, va_list args) {
     return printf(format, args);
+}
+
+// SpGameServer::_vsyncWait
+PPC_FUNC_IMPL(__imp__sub_8249B680);
+PPC_FUNC(sub_8249B680)
+{
+    auto now = std::chrono::steady_clock::now();
+    constexpr auto INTERVAL = 1000000000ns / 60;
+    auto next = now + (INTERVAL - now.time_since_epoch() % INTERVAL);
+
+    std::this_thread::sleep_until(next);
 }
 
 // Memory functions
